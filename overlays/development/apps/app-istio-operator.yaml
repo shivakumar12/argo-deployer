@@ -10,7 +10,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: deploy
-    repoURL: 'https://github.com/subhakar-ci-cd/istio-operator-kustomize'
+    repoURL: 'https://github.com/shivakumar12/istooperator'
     targetRevision: HEAD
   project: default
   syncPolicy:
@@ -33,7 +33,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: profiles/overlays/local
-    repoURL: 'https://github.com/subhakar-ci-cd/istio-operator-kustomize.git'
+    repoURL: 'https://github.com/shivakumar12/istooperator.git'
     targetRevision: HEAD
   project: default
   syncPolicy:
