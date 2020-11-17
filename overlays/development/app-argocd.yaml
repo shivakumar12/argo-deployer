@@ -10,7 +10,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: overlays/development
-    repoURL: 'https://github.com/subhakar-ci-cd-tools/k8s-argocd-deployment'
+    repoURL: 'https://github.com/shivakumar12/argo-deployer'
     targetRevision: HEAD
   project: default
   syncPolicy:
