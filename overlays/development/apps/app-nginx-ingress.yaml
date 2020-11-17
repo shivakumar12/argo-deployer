@@ -10,7 +10,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: overlays/development
-    repoURL: 'https://github.com/subhakar-ci-cd/ingress-nginx-kustomize'
+    repoURL: 'https://github.com/shivakumar12/ingress-nginx'
     targetRevision: HEAD
   project: default
   syncPolicy:
