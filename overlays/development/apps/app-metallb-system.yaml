@@ -10,7 +10,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: .
-    repoURL: 'https://github.com/subhakar-ci-cd/metallb-system'
+    repoURL: 'https://github.com/shivakumar12/metal-alb'
     targetRevision: HEAD
   project: default
   syncPolicy:
