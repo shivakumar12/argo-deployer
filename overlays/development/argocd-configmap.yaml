@@ -8,13 +8,11 @@ metadata:
   namespace: argocd
 data:
   repositories: |
-    - url: https://github.com/subhakar-ci-cd/k8s-argocd-deployment
+    - url: https://github.com/shivakumar12/argo-deployer
       type: git
-    - url: https://github.com/subhakar-ci-cd/metallb-system
+    - url: https://github.com/shivakumar12/metal-alb
       type: git
-    - url: https://github.com/subhakar-ci-cd/ingress-nginx-kustomize
+    - url: https://github.com/shivakumar12/ingress-nginx
       type: git
-    - url: https://github.com/subhakar-ci-cd/istio-operator-kustomize
-      type: git
-    - url: https://github.com/subhakar-ci-cd/helm-charts
+    - url: https://github.com/shivakumar12/istooperator
       type: git
