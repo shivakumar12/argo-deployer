@@ -16,5 +16,3 @@ data:
       type: git
     - url: https://github.com/shivakumar12/istooperator
       type: git
-    - url: https://github.com/shivakumar12/istio-bookinfo
-      type: git
