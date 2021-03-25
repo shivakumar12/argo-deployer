@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argocd-repo-server
+  namespace: argocd
+spec:
+  template:
+    spec:
+      volumes:
+      - name: custom-tools
+        emptyDir: {}
+      initContainers:
+      - name: download-tools
+        image: alpine:3.8
+        command: [sh, -c]
+        args:
+        - wget -q -O - https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv3.10.0/kustomize_v3.10.0_linux_amd64.tar.gz | tar -zxvf - &&
+          mv kustomize /custom-tools/kustomize &&
+          chmod +x /custom-tools/kustomize
+        volumeMounts:
+        - mountPath: /custom-tools
+          name: custom-tools
+      containers:
+      - name: argocd-repo-server
+        volumeMounts:
+        - mountPath: /usr/local/bin/kustomize
+          name: custom-tools
+          subPath: kustomize
