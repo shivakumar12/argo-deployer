@@ -3069,7 +3069,7 @@ spec:
         - --redis
         - argocd-redis-ha-haproxy:6379
         image: argoproj/argocd:v1.7.4
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
             path: /healthz
@@ -3109,7 +3109,7 @@ spec:
         - /shared/argocd-util
         - rundex
         image: quay.io/dexidp/dex:v2.22.0
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         name: dex
         ports:
         - containerPort: 5556
@@ -3125,7 +3125,7 @@ spec:
         - /usr/local/bin/argocd-util
         - /shared
         image: argoproj/argocd:v1.7.4
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         name: copyutil
         volumeMounts:
         - mountPath: /shared
@@ -3175,7 +3175,7 @@ spec:
         - --redis
         - argocd-redis-ha-haproxy:6379
         image: argoproj/argocd:v1.7.4
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         name: argocd-repo-server
         ports:
         - containerPort: 8081
@@ -3250,7 +3250,7 @@ spec:
         - name: ARGOCD_API_SERVER_REPLICAS
           value: "2"
         image: argoproj/argocd:v1.7.4
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         name: argocd-server
         ports:
         - containerPort: 8080
