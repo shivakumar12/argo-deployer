@@ -10,7 +10,7 @@ resources:
   
 images:
   - name: argoproj/argocd
-    newTag: v1.8.1
+    newTag: v2.0.0-rc1
     
 patchesStrategicMerge:
   - argocd-server-service.yaml
