@@ -15,4 +15,4 @@ images:
 patchesStrategicMerge:
   - argocd-server-service.yaml
   - argocd-configmap.yaml
-  #- kustomize-upgrade.yaml
+  - kustomize-upgrade.yaml
