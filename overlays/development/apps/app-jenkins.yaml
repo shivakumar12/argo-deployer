@@ -10,7 +10,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: charts/jenkins
-    repoURL: 'https://github.com/shivakumar12/helm-demo'
+    repoURL: 'https://github.com/shivakumar12/jenkins'
     targetRevision: HEAD
   project: default
   syncPolicy:
